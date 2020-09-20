@@ -1,6 +1,17 @@
 package com.tictactoe;
 
 class TicTacToe {
+    private static final String ANSI_RESET = "\u001B[0m";
+    private static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    private final int SIZE;
+    private final int WINNING_NUM;
+
+    private char[][] board;
+    private int madeTurns;
+    private boolean gameOver;
+    private boolean tie;
+
     TicTacToe(int size, int winningNum) {
         this.board = new char[size][size];
         this.SIZE = size;
@@ -164,14 +175,4 @@ class TicTacToe {
         }
         System.out.println();
     }
-
-    private char[][] board;
-    private final int SIZE;
-    private final int WINNING_NUM;
-    private int madeTurns;
-    private boolean gameOver;
-    private boolean tie;
-    private static final String ANSI_RESET = "\u001B[0m";
-    private static final String ANSI_RED = "\u001B[31m";
-    public static final String ANSI_GREEN = "\u001B[32m";
 }
